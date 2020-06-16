@@ -1,0 +1,12 @@
+﻿@model StaraPiasokownicaNetFramework.Models.Employee
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+<div class="btn btn-primary">
+    <p>Id uzytkownika: @Model.IdEmployee</p>
+    <p>Imie: @Model.FirstName</p>
+    <p>Nazwisko: @Model.LastName</p>
+</div>

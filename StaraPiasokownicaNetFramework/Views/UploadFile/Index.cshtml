@@ -1,0 +1,57 @@
+﻿@model StaraPiasokownicaNetFramework.Models.tblImages
+@{
+   // Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<div>
+  
+    @*<table>
+            <thead>
+            <tr>
+                <th>Nazwa</th>
+                <th>Usun</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var x in Model)
+            {
+                <tr>
+                    <td>@Html.Label(x.Name)</td>
+                    <td>
+                        <button data-id="@x.Id">Usun</button>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>*@
+   
+    
+    @using (Html.BeginForm("Process", "UploadFile", FormMethod.Post, new {enctype = "multipart/form-data"}))
+    {
+        @ViewBag.Error
+        <table cellpadding="2" cellspacing="2">
+            <tr>
+                <td>Photo</td>
+                <td><input type="file" name="photo"/></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type="submit" value="Upload"/></td>
+            </tr>
+        </table>
+
+       
+    }
+
+</div>
+</body>
+</html>
